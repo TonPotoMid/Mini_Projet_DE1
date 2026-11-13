@@ -1,5 +1,5 @@
 [project]
-name = "integde1-pipeline"
+name = "mini-projet-de1-pipeline"
 version = "1.0.0"
 requires-python = ">=3.11"
 

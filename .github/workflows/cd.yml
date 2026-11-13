@@ -73,6 +73,6 @@ jobs:
           mkdir -p ~/.ssh && echo "${{ secrets.VM_SSH_KEY }}" > ~/.ssh/id_ed25519 && chmod 600 ~/.ssh/id_ed25519
           ssh-keyscan -H "${{ secrets.VM_HOST }}" >> ~/.ssh/known_hosts
           TARGET="${{ secrets.VM_USER }}@${{ secrets.VM_HOST }}"
-          ssh "$TARGET" "mkdir -p ~/integde1"
-          scp -r docker-compose.yml grafana "$TARGET:~/integde1/"
-          ssh "$TARGET" "cd ~/integde1 && docker compose --profile prod pull && docker compose --profile prod up -d"
+          ssh "$TARGET" "mkdir -p ~/mini_projet_de1"
+          scp -r docker-compose.yml grafana "$TARGET:~/mini_projet_de1/"
+          ssh "$TARGET" "cd ~/mini_projet_de1 && docker compose --profile prod pull && docker compose --profile prod up -d"

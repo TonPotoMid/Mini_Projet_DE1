@@ -1,4 +1,4 @@
-name: integde1
+name: mini-projet-de1
 
 services:
   s3:
@@ -43,7 +43,7 @@ services:
   # Service de traitement (prod) : relance le traitement toutes les 60 s
   pipeline:
     build: .
-    image: ghcr.io/tonpotomid/integde1:latest
+    image: ghcr.io/tonpotomid/mini_projet_de1:latest
     profiles: ["prod"]
     command: ["python", "-m", "pipeline.main", "process", "--loop", "60"]
     restart: unless-stopped
